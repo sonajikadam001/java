@@ -1,0 +1,30 @@
+package TEA139;
+import java.util.Scanner;
+public class Exp5_SortNames {
+	public static void main(String args[])
+	{
+		int i,j,n;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("How many strings do you want to enter");
+		n = sc.nextInt();
+		String name[] = new String[n+1];
+		System.out.println("Enter String : ");
+		for(i=0;i<n;i++)
+			name[i] = sc.next();
+	    for(i=0;i<n;i++)
+	    {
+	    	for(j=i+1;j<n;j++)
+	    	{
+	    		if(name[i].trim().compareTo(name[j].trim())==0)
+	    		{
+	    			String temp = name[i];
+	    			name[i] = name[j];
+	    			name[j] = temp;
+	    		}	
+	    	}
+	    }
+	    System.out.println("Sorted List is : ");
+	    for(i=0;i<n;i++)
+	    	System.out.println(" " + name[i]);
+	}
+}

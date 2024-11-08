@@ -1,0 +1,24 @@
+package TEA139;
+
+public class Exp4_MethodOverload {
+	void sum(int a, int b)
+	{
+		System.out.println("Sum is " + (a+b));
+	}
+	void sum(int a, int b, int c)
+	{
+		System.out.println("Sum is " + (a+b+c));
+	}
+	void sum(double a, double b)
+	{
+		System.out.println("Sum is " + (a+b));
+	}
+	public static void main(String args[])
+	{
+		Exp4_MethodOverload cal = new Exp4_MethodOverload();
+		System.out.println("Method Overloading");
+		cal.sum(8,5);
+		cal.sum(5,5,5);
+		cal.sum(4.6,3.8);
+	}
+}

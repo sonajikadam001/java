@@ -1,0 +1,120 @@
+package TEA139;
+import java.util.Scanner;
+
+public class Exp7 {
+	
+	public static void main (String[] args)
+	{
+		
+		Cricket ckt = new Cricket();
+		Football fb = new Football();
+		Hockey hk = new Hockey();
+		Scanner read = new Scanner(System.in);
+		int op1 , op2;
+		
+		while(true)
+		{
+			System.out.println("\n 1.Enter Details 2.Display  3.Exit");
+			System.out.print("\nEnter your option : ");
+			op1 = read.nextInt();
+			
+			switch(op1)
+			{
+			
+				case 1:
+					System.out.println("\n 1.Football Player 2.Hockey Player  3.Cricket Player");
+					System.out.print("\nEnter your option : ");
+					op2= read.nextInt();
+					switch(op2)
+					{
+						case 1:
+							System.out.print("Enter Name : ");
+							fb.name = read.next();
+							
+							System.out.print("Enter age : ");
+							fb.age = read.nextInt();
+							
+							System.out.print("Enter Skill : ");
+							fb.Skill = read.next();
+						break;	
+							
+						case 2:
+							System.out.print("Enter Name : ");
+							hk.name = read.next();
+							
+							System.out.print("Enter age : ");
+							hk.age = read.nextInt();
+							
+							System.out.print("Enter Skill : ");
+							hk.Skill = read.next();
+						break;	
+						
+						case 3:
+							System.out.print("Enter Name : ");
+							ckt.name = read.next();
+							
+							System.out.print("Enter age : ");
+							ckt.age = read.nextInt();
+							
+							System.out.print("Enter Skill : ");
+							ckt.Skill = read.next();
+						break;					
+					}
+				break;
+				
+				
+					
+				case 2:
+					System.out.println(" \n1.Football Player 2.Hockey Player  3.Cricket Player");
+					System.out.print("\nEnter your option : ");
+					op2= read.nextInt();
+					switch(op2)
+					{
+					case 1:
+						System.out.println("Name : " + fb.name);
+						System.out.println("Age : " + fb.age);
+						System.out.println("Skill : " + fb.Skill);
+						break;	
+						
+					case 2:
+						System.out.println("Name : " + hk.name);
+						System.out.println("Age : " + hk.age);
+						System.out.println("Skill : " + hk.Skill);
+						break;	
+						
+					case 3:
+						System.out.println("Name : " + ckt.name);
+						System.out.println("Age : " + ckt.age);
+						System.out.println("Skill : " + ckt.Skill);
+						break;					
+					}
+				break;
+				
+				case 3:
+					System.exit(0);
+					
+			}
+		}
+	}
+}
+
+
+
+class Player{
+	
+	String name;
+	int age;
+	String Skill;
+	
+}
+
+class Cricket extends Player{
+	
+}
+
+class Football extends Player{
+	
+}
+class Hockey extends Player{
+	
+}

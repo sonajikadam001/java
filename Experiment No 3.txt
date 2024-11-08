@@ -1,0 +1,55 @@
+package TEA139;
+import java.util.Scanner;
+public class Exp3
+{
+    private double w,l,area;
+    private String colour;
+     Scanner sc = new Scanner(System.in);
+    void get_length()
+    {
+	 System.out.println("Enter the length");
+	 l = sc.nextDouble();
+    }
+    void get_width()
+    {
+	 System.out.println("Enter the width");
+	 w = sc.nextDouble();
+    }
+    void get_colour()
+    {
+	 System.out.println("Enter the colour");
+	 colour = sc.next();
+    }
+    double find_area()
+    {
+	area = l*w;
+	return area;
+    }
+    String show_colour()
+    {
+    return colour;
+    }
+
+	public static void main(String[] args)
+	{
+		Exp3 R1 = new Exp3();
+		Exp3 R2 = new Exp3();
+		System.out.println("First Rectangle");
+		R1.get_length();
+		R1.get_width();
+		R1.get_colour();
+		System.out.println("Second Rectangle");
+		R2.get_length();
+		R2.get_width();
+		R2.get_colour();
+		String c1 = R1.show_colour();
+		String c2 = R2.show_colour();
+		
+		if(R1.find_area()==R2.find_area() && (c1.compareTo(c2)==0))
+			System.out.println("Matching Rectangles");
+		else
+			System.out.println("Non-Matching Rectangles");
+			
+	}
+}
+

@@ -1,0 +1,26 @@
+package TEA139;
+
+public class Exp4_ConstructorOverload 
+{
+	int id;
+	String name;
+	Exp4_ConstructorOverload()
+	{
+	System.out.println("Default Constructor");
+    }
+	Exp4_ConstructorOverload(int i,String n)
+	{
+		id = i;
+		name = n;
+	}
+	public static void main(String args[])
+	{
+	Exp4_ConstructorOverload s1 = new Exp4_ConstructorOverload();
+	System.out.println("\n Default Constructor values \n");
+	System.out.println("Student ID : " +s1.id + "\n Student Name : " + s1.name);
+	System.out.println("\n Parametrized Constructor values \n");
+	Exp4_ConstructorOverload s2 = new Exp4_ConstructorOverload(39, "Ruchir");
+	System.out.println("Student ID : " +s2.id + "\n Student Name : " + s2.name);
+	
+    }
+}

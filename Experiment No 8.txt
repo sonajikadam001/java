@@ -1,0 +1,31 @@
+package TEA139;
+
+public class Exp8 {
+public static void main(String args[]) {
+	carnames a = new carnames();
+	a.sedan();
+	a.suv();
+	a.exotic();
+}
+}
+interface cars
+{
+	public void sedan();
+	public void suv();
+	public void exotic();
+}
+class carnames implements cars
+{
+	public void sedan()
+	{
+		System.out.println("The Sedan car is Mercedes Benz");
+	}
+	public void suv()
+	{
+		System.out.println("The SUV Car is Jaguar");
+	}
+	public void exotic()
+	{
+		System.out.println("The Exotic Car is BMW");
+	}
+}
